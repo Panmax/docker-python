@@ -55,10 +55,10 @@ RUN apt-get update \
     libssl-dev \
     build-essential
 
-RUN curl -s https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.8-linux-x86_64.tar.bz2 | tar xvj -C /opt/ \
- && mv /opt/phantomjs-1.9.8-linux-x86_64/ /opt/phantomjs/
-
-ENV PATH "/opt/phantomjs/bin:$PATH"
+#RUN curl -s https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.8-linux-x86_64.tar.bz2 | tar xvj -C /opt/ \
+# && mv /opt/phantomjs-1.9.8-linux-x86_64/ /opt/phantomjs/
+#
+#ENV PATH "/opt/phantomjs/bin:$PATH"
 
 ADD pip.conf /etc/pip.conf.custom
 RUN pip install --no-cache-dir --no-binary cryptography virtualenv
