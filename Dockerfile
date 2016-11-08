@@ -2,6 +2,7 @@ FROM python:2.7.12-slim
 MAINTAINER Panmax <jiapan.china@mail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 ADD sources.list.jessie.txt /etc/apt/sources.list
 
